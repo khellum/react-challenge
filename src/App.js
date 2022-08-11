@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {Fragment} from "react";
+import PrimarySearchAppBar from "./components/appBar/index";
+import CartComponent from "./components/cartComponent";
+import NavBar from "./components/navBar";
+// import { Button } from "@mui/material";
+import SugerenceComponent from "./components/sugerenceComponent/sugerenceComponent";
+import FooterComponent from "./components/footer/footerComponent";
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <PrimarySearchAppBar/>
+      <NavBar />
+      <CartComponent/>
+      <SugerenceComponent/>
+      <FooterComponent />    
+    </Fragment>
   );
 }
 
